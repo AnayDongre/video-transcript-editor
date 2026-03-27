@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+  }
+}
+
+/* Yellow text selection in transcript area */
+.transcript-text ::selection {
+  background: #fde68a;
+  color: inherit;
+}
+.transcript-text ::-moz-selection {
+  background: #fde68a;
+  color: inherit;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  outline: none;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Scrollbar styling for transcript */
+.transcript-text::-webkit-scrollbar {
+  width: 6px;
+}
+.transcript-text::-webkit-scrollbar-track {
+  background: transparent;
+}
+.transcript-text::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+.transcript-text::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
